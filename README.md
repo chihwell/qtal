@@ -1,2 +1,0 @@
-# qtal
-catv
