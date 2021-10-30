@@ -1,0 +1,21 @@
+#PAT需要申请，教程详见：https://www.jianshu.com/p/bb82b3ad1d11
+
+name: 同步猫影视仓库
+on:
+  workflow_dispatch:
+  watch:
+    types: started
+jobs:
+  repo-sync:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        persist-credentials: false
+    - name: Sync-CatVodTVSpider
+      uses: repo-sync/github-sync@v2
+      with:
+        source_repo: "https://github.com/catvod/CatVodTVSpider.git"
+        source_branch: "master"
+        destination_branch: "appSpider"
+        github_token: ${{ secrets.PAT }}
