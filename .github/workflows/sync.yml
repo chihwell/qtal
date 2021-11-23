@@ -1,6 +1,6 @@
 #PAT需要申请，教程详见：https://www.jianshu.com/p/bb82b3ad1d11
 
-name: 同步猫影视仓库
+name: 同步CatVodTVSpider
 on:
   workflow_dispatch:
   watch:
